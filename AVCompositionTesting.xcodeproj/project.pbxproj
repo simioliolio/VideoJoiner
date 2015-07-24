@@ -12,6 +12,8 @@
 		91B7A9B71B627B1C00023BE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B7A9B61B627B1C00023BE2 /* Images.xcassets */; };
 		91B7A9BA1B627B1C00023BE2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91B7A9B81B627B1C00023BE2 /* MainMenu.xib */; };
 		91B7A9C61B627B1C00023BE2 /* AVCompositionTestingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B7A9C51B627B1C00023BE2 /* AVCompositionTestingTests.m */; };
+		91B7A9D11B627D5C00023BE2 /* VideoCompositor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B7A9D01B627D5B00023BE2 /* VideoCompositor.m */; };
+		91B7A9D21B627D5C00023BE2 /* VideoCompositor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B7A9D01B627D5B00023BE2 /* VideoCompositor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		91B7A9BF1B627B1C00023BE2 /* AVCompositionTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVCompositionTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B7A9C41B627B1C00023BE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91B7A9C51B627B1C00023BE2 /* AVCompositionTestingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVCompositionTestingTests.m; sourceTree = "<group>"; };
+		91B7A9CF1B627D5B00023BE2 /* VideoCompositor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCompositor.h; sourceTree = "<group>"; };
+		91B7A9D01B627D5B00023BE2 /* VideoCompositor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCompositor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			children = (
 				91B7A9B11B627B1C00023BE2 /* AppDelegate.h */,
 				91B7A9B21B627B1C00023BE2 /* AppDelegate.m */,
+				91B7A9CF1B627D5B00023BE2 /* VideoCompositor.h */,
+				91B7A9D01B627D5B00023BE2 /* VideoCompositor.m */,
 				91B7A9B61B627B1C00023BE2 /* Images.xcassets */,
 				91B7A9B81B627B1C00023BE2 /* MainMenu.xib */,
 				91B7A9AF1B627B1C00023BE2 /* Supporting Files */,
@@ -212,6 +218,7 @@
 			files = (
 				91B7A9B51B627B1C00023BE2 /* main.m in Sources */,
 				91B7A9B31B627B1C00023BE2 /* AppDelegate.m in Sources */,
+				91B7A9D11B627D5C00023BE2 /* VideoCompositor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91B7A9D21B627D5C00023BE2 /* VideoCompositor.m in Sources */,
 				91B7A9C61B627B1C00023BE2 /* AVCompositionTestingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
