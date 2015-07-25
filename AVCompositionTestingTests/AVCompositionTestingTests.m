@@ -41,6 +41,8 @@
     NSURL *videoOnePath = [NSURL fileURLWithPath:@"/Users/simioliolio/Movies/wiggle left.mov" isDirectory:NO];
     NSURL *videoTwoPath = [NSURL fileURLWithPath:@"/Users/simioliolio/Movies/wiggle right.mov" isDirectory:NO];
     
+    NSURL *imageOnePath = [NSURL fileURLWithPath:@"/Users/simioliolio/Pictures/Test Images/numbers/1.png" isDirectory:NO];
+    
     // output file URL is based on date / time
     static NSDateFormatter *kDateFormatter;
     if (!kDateFormatter) {
@@ -59,16 +61,28 @@
     // compose!
     VideoCompositor *compositor = [[VideoCompositor alloc] init];
     [compositor createNewComposition];
-    error = [compositor appendVideoWithURL:videoOnePath];
+    
+    error = [compositor appendCompositionWithVideoAtURL:videoOnePath];
     if (error) {
+        NSLog([error localizedDescription]);
         XCTAssert(NO, @"error adding first video");
     }
-    error = [compositor appendVideoWithURL:videoTwoPath];
+    
+    error = [compositor appendCompositionWithImageAtURL:imageOnePath];
     if (error) {
+        NSLog([error localizedDescription]);
+        XCTAssert(NO, @"error adding first image");
+    }
+    
+    error = [compositor appendCompositionWithVideoAtURL:videoTwoPath];
+    if (error) {
+        NSLog([error localizedDescription]);
         XCTAssert(NO, @"error adding second video");
     }
-    error = [compositor writeOutVideoToURL:filePathWithExtension];
+    
+    error = [compositor writeCompositionToURL:filePathWithExtension];
     if (error) {
+        NSLog([error localizedDescription]);
         XCTAssert(NO, @"error writing out video");
     }
     XCTAssert(YES, @"Pass");
